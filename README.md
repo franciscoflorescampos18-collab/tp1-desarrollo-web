@@ -1,16 +1,56 @@
-# React + Vite
+#Trabajo Práctico N.º 1 - Desarrollo Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Comisión: 2B
 
-Currently, two official plugins are available:
+#Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Flores, Katerina
+* La madrid, Javier
 
-## React Compiler
+#Herramienta de estilización
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Bootstrap**
 
-## Expanding the ESLint configuration
+#Descripción
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este proyecto corresponde al Trabajo Práctico Nº 1 de la materia Desarrollo Web.
+
+El trabajo fue desarrollado utilizando React y Bootstrap para la estilización de los componentes.
+
+#Ejercicios
+
+##Ejercicio 1 - Cambio de contraseña
+
+Formulario que permite al usuario ingresar los datos necesarios para realizar un cambio de contraseña.
+
+##Ejercicio 2 - Alta de mascotas
+
+Formulario para el alta de mascotas en un software de peluquería canina.
+
+El formulario contiene:
+
+* Nombre
+* Fecha de nacimiento
+* Edad
+* Raza
+* Foto
+* Teléfono de contacto
+* Bozal
+* Puede consumir golosinas
+
+##Ejercicio 3 - Televisores
+
+Renderizado de una lista de televisores y aplicación de diferentes filtros:
+
+* Lista completa de televisores.
+* Televisores que no tienen WiFi.
+* Televisores con sistema operativo Google TV.
+* Televisores de marca Samsung que tengan WiFi.
+
+##Tecnologías utilizadas
+
+* React
+* Bootstrap
+* JavaScript
+* HTML
+* CSS
