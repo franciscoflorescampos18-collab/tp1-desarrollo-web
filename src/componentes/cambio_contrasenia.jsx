@@ -74,22 +74,32 @@ function CambioContrasenia() {
     }
 
     return (
-        <div className="min-vh-100 d-flex align-items-center justify-content-center p-3"
-        style={{ backgroundColor: "#0a111e" }}>
+        <div className="min-vh-100 w-100 d-flex align-items-center justify-content-center p-3"
+        style={{ backgroundColor: "#0a111e", minWidth: "100vw"}}>
 
-            <div className="card mx-auto" style={{ maxWidth: "500px" }}>
+            <div className="card shadow-lg text-white border-0" 
+            style={{ 
+                maxWidth: "450px", 
+                width: "100%", 
+                backgroundColor: "#182232", 
+                borderRadius: "12px",
+                boxShadow: "0 0 20px rgba(0, 210, 255, 0.15)" 
+            }}>
 
-                <div className="card-body">
+                <div className="card-body p-4">
 
-                    <h1 className="card-title text-center mb-4">
-                        Cambiar contraseña
-                    </h1>
+                    <div className="text-center mb-4">
+                        <h2 className="fw-bold" style={{ color: "#00d2ff", letterSpacing: "1px"}}>
+                            V-MAX
+                        </h2>
+                        <h5 className= "text-light">Cambio de contraseña</h5>
+                    </div>
 
                     <form onSubmit={manejarCambio}>
 
                         <div className="mb-3">
 
-                            <label className="form-label">
+                            <label className="form-label text-light">
                                 Ingrese su contraseña actual
                             </label>
 
@@ -97,16 +107,17 @@ function CambioContrasenia() {
 
                                 <input
                                     type={verActual ? "text" : "password"}
-                                    className={`form-control pe-5 ${errorActual ? "is-invalid" : ""}`}
+                                    className={`form-control pe-5 bg-dark text-white border-secondary pe-5 ${errorActual ? "is-invalid" : ""}`}
                                     value={contraseniaActual}
                                     onChange={(e)=> {setContraseniaActual(e.target.value)
                                     setErrorActual("")
                                     } }
+                                    style={{ backgroundColor: "#0f172a", borderColor: "#334155", backgroundImage: 'none'}}
                                 />
                                 
                                 <button
                                     type="button"
-                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent"
+                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent text-secondary z-3"
                                     onClick={() => setVerActual(!verActual)}
                                 >
                                     {verActual ? (
@@ -118,7 +129,7 @@ function CambioContrasenia() {
 
                             </div>
                             {errorActual && (
-                                    <div className="text-danger">
+                                    <div className="text-danger small mt-1">
                                         {errorActual}
                                     </div>
                             )}
@@ -126,7 +137,7 @@ function CambioContrasenia() {
 
                         <div className="mb-3">
 
-                            <label className="form-label">
+                            <label className="form-label text-light">
                                 Ingrese su contraseña nueva
                             </label>
 
@@ -134,17 +145,18 @@ function CambioContrasenia() {
 
                                 <input
                                     type={verNueva ? "text" : "password"}
-                                    className={`form-control pe-5 ${errorActual ? "is-invalid" : ""}`}
+                                    className={`form-control bg-dark text-white border-secondary pe-5 ${errorNueva ? "is-invalid" : ""}`}
                                     value={nuevaContrasenia}
                                     onChange={(e)=> {setNuevaContrasenia(e.target.value)
                                         setErrorNueva("")
                                     } }
+                                    style={{ backgroundColor: "#0f172a", borderColor: "#334155", backgroundImage: 'none'}}
                                     
                                 />
 
                                 <button
                                     type="button"
-                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent"
+                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent text-secondary z-3"
                                     onClick={() => setVerNueva(!verNueva)}
                                 >
                                     {verNueva ? (
@@ -157,7 +169,7 @@ function CambioContrasenia() {
                             </div>
 
                             {errorNueva && (
-                                <div className="text-danger">
+                                <div className="text-danger small mt-1">
                                     {errorNueva}
                                 </div>
                             )}
@@ -166,7 +178,7 @@ function CambioContrasenia() {
 
                         <div className="mb-3">
 
-                            <label className="form-label">
+                            <label className="form-label text-light">
                                 Confirmar contraseña
                             </label>
 
@@ -174,17 +186,18 @@ function CambioContrasenia() {
 
                                 <input
                                     type={verConfirmar ? "text" : "password"}
-                                    className={`form-control pe-5 ${errorActual ? "is-invalid" : ""}`}
+                                    className={`form-control bg-dark text-white border-secondary pe-5 ${errorConfirmar ? "is-invalid" : ""}`}
                                     value={confirmarContrasenia}
                                     onChange={(e)=> { 
                                         setConfirmarContrasenia(e.target.value)
                                         setErrorConfirmar("")
                                     }}
+                                    style={{ backgroundColor: "#0f172a", borderColor: "#334155", backgroundImage: 'none' }}
                                 />
 
                                 <button
                                     type="button"
-                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent z-3"
+                                    className="btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-3 bg-transparent text-secondary z-3"
                                     onClick={() => setVerConfirmar(!verConfirmar)}
                                 >
                                     {verConfirmar ? (
@@ -197,14 +210,20 @@ function CambioContrasenia() {
                             </div>
 
                             {errorConfirmar && (
-                                <div className="text-danger">
+                                <div className="text-danger small mt-1">
                                     {errorConfirmar}
                                 </div>
                             )}
 
                         </div>
 
-                        <button type="submit" className="btn btn-primary w-100">
+                        <button type="submit" className="btn w-100 fw-bold mt-3 text-dark"
+                        style={{
+                            backgroundColor: "#00d2ff", 
+                            borderColor: "#00d2ff",
+                            boxShadow: "0 0 10px rgba(0, 210, 255, 0.4)"
+                        }}      
+                        >
                             Cambiar contraseña
                         </button>
 
