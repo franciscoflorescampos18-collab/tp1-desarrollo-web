@@ -1,4 +1,4 @@
-import CambioContrasenia from "./componentes/cambio_contrasenia"
+import CambioContrasenia from "./componentes/punto_1/cambio_contrasenia"
 
 function App() {
 
